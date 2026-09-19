@@ -1,0 +1,12 @@
+{
+  "reference": "https://hidarling.com/products/wet-kiss",
+  "assets": {
+    "wet-kiss.jpg": "https://api.hidarling.com/storage/product/thumb_1350x1350_ISgcaG90FAr6ALCoUTiVWwnYXeRqk9PQ69MAxb9a.jpg",
+    "model.jpg": "https://api.hidarling.com/storage/product/thumb_1350x1350_XbjEofl8QWjmE9BBfjaSoASRoIQyx0AABjNplDix.jpg",
+    "texture.jpg": "https://api.hidarling.com/storage/product/thumb_1350x1350_5bFWs0ViNXKtYtoPfmNd0PmH8bmX4NGdCSt2BT7w.jpg",
+    "finish.mp4": "https://api.hidarling.com/storage/product/5KaSVTMp88XdljfdeFrKeiT1RCQeGVw0r4WgjSr9.mp4",
+    "finish-mobile.mp4": "https://api.hidarling.com/storage/product/iKFHl8BWEYt4i9zPjKnQlHbUrjkBpNzAR5FUMF3L.mp4",
+    "application.mp4": "https://api.hidarling.com/storage/product/GeaPGqKIJAez94B3oexmIFtBKsDQt73no4nq5Kyx.mp4",
+    "application-mobile.mp4": "https://api.hidarling.com/storage/product/ddj4gc1PdbahSgQifuRks4YSbOEaBEKLf1JS3ccI.mp4"
+  }
+}
