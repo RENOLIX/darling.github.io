@@ -39,8 +39,17 @@ form.addEventListener('submit',async event=>{
   finally{clearTimeout(timeout);form.removeAttribute('aria-busy')}
 });
 form.elements['Téléphone'].addEventListener('input',event=>event.target.setCustomValidity(''));
-const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const videoObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{const v=entry.target;if(entry.isIntersecting){if(!v.getAttribute('src')){v.src=matchMedia('(max-width: 700px)').matches?v.dataset.mobile:v.dataset.desktop;v.load()}if(!reducedMotion&&!v.dataset.manuallyPaused)v.play().catch(()=>{})}else{v.dataset.offscreen='true';v.pause()}}),{threshold:.2});
-document.querySelectorAll('.product-video').forEach(v=>{videoObserver.observe(v);v.addEventListener('pause',()=>{if(v.dataset.offscreen){delete v.dataset.offscreen}else{v.dataset.manuallyPaused='true'}});v.addEventListener('play',()=>{delete v.dataset.offscreen;delete v.dataset.manuallyPaused})});
+const videoObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  const video=entry.target;
+  if(entry.isIntersecting&&entry.intersectionRatio>=.2){
+    if(!video.getAttribute('src')){
+      video.src=matchMedia('(max-width: 700px)').matches?video.dataset.mobile:video.dataset.desktop;
+      video.load();
+    }
+    video.muted=true;
+    video.play().catch(()=>{});
+  }else video.pause();
+}),{threshold:[0,.2]});
+document.querySelectorAll('.product-video').forEach(video=>videoObserver.observe(video));
 new IntersectionObserver(entries=>{$('.mobile-buy').classList.toggle('in-form',entries[0].isIntersecting)},{threshold:.05}).observe(form);
 update();
