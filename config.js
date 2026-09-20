@@ -1,5 +1,5 @@
 window.DARLING_CONFIG = {
-  "price": 6000,
+  "price": 3000,
   "accessKey": "866f39fb-ecca-42dd-8320-f251771fac22",
   "wilayas": [
     "Adrar",
@@ -197,10 +197,6 @@ window.DARLING_CONFIG = {
     {
       "code": "*04",
       "color": "#ff0000"
-    },
-    {
-      "code": "*05",
-      "color": "#ae4646"
     }
   ],
   "ingredients": "Diisostearyl Malate, Bis-Behenyl/Isostearyl/Phytosteryl Dimer Dilinoleyl Dimer Dilinoleate, Hydrogenated Polyisobutene, Bis-Diglyceryl Polyacyladipate-2, Polyglyceryl-2 Triisostearate, Ceresin, Menthyl Lactate, Microcrystalline Wax, 1,2-Hexanediol, Titanium Dioxide (CI 77891), Yellow 5 Lake (CI 19140), Tocopheryl Acetate, Red 7 Lake (CI 15850), Fragrance, BHT."

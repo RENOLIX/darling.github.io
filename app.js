@@ -28,10 +28,8 @@ function update(){
 }
 document.querySelectorAll('.swatch').forEach(el=>el.addEventListener('click',()=>{
   selected=Number(el.dataset.shade);update();
-  const note=$('#shade-photo-note');note.hidden=selected<4;
-  note.textContent=selected===4?'La photo du rendu de la teinte 05 sera ajoutée prochainement.':'';
-  showPhoto(selected<4?selected+4:1);
-  if(selected<4&&matchMedia('(max-width: 700px)').matches)$('.gallery').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
+  showPhoto(selected+4);
+  if(matchMedia('(max-width: 700px)').matches)$('.gallery').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
 }));
 function showPhoto(index){photoIndex=(index+photos.length)%photos.length;$('#hero').src=photos[photoIndex][0];$('#hero').alt=photos[photoIndex][1];$('.hero-photo').classList.toggle('shade-photo',photoIndex>=3);$('#photo-counter').textContent=String(photoIndex+1).padStart(2,'0')+' / '+String(photos.length).padStart(2,'0');document.querySelectorAll('.thumb').forEach((el,i)=>{el.classList.toggle('active',i===photoIndex);el.setAttribute('aria-pressed',String(i===photoIndex))})}
 document.querySelectorAll('.thumb').forEach(el=>el.addEventListener('click',()=>showPhoto(Number(el.dataset.photo))));$('#prev').onclick=()=>showPhoto(photoIndex-1);$('#next').onclick=()=>showPhoto(photoIndex+1);
