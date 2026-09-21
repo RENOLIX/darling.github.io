@@ -1,6 +1,6 @@
 window.DARLING_CONFIG = {
   "price": 3000,
-  "accessKey": "866f39fb-ecca-42dd-8320-f251771fac22",
+  "accessKey": "5baa94cf-7bbe-4ff4-bf4f-9baead4ccdbe",
   "wilayas": [
     "Adrar",
     "Chlef",
